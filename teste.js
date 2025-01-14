@@ -1,3 +1,3 @@
 setInterval(function () {
-  alert(123);
+  document.body.innerHTML = '';
 }, 2000);
