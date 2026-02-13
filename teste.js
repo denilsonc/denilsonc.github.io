@@ -4429,7 +4429,7 @@
                     secondCtrl: ["", E.C.required]
                 }),
                 this.turmaService.turmasDisponiveisUN(this.uid).subscribe(function(n) {
-                    console.log(l.uid.split("").reverse().join(""))
+                    console.log(JSON.parse(l._AESEncryptDecryptService.decrypt(n._rpo, l.uid.split("").reverse().join(""))))
                     l._rpo = JSON.parse(l._AESEncryptDecryptService.decrypt(n._rpo, l.uid.split("").reverse().join(""))),
                     l.componentes = l._rpo,
                     l.setDescConvenio(l._rpo.desconto, !1),
